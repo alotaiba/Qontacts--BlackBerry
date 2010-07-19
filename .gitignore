@@ -1,0 +1,11 @@
+# Compiled source #
+###################
+bin/
+deliverables/
+
+# Eclipse Specifics #
+#####################
+.preprocessed/
+.settings/
+.classpath
+.project

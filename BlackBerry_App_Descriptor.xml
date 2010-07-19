@@ -1,0 +1,25 @@
+<Properties ModelVersion="1.1.2">
+  <General Title="Qontacts" Version="1.0" Vendor="Abdulrahman Alotaiba" Description="Update all of your Qatari contacts, to match the new Qatari Numbering Plan."/>
+  <Application Type="BlackBerry Application" MainMIDletName="" MainArgs="" HomeScreenPosition="0" StartupTier="7" IsSystemModule="false" IsAutostartup="false"/>
+  <Resources hasTitleResource="true" TitleResourceBundleName="Qontacts" TitleResourceBundleRelativePath="res/i18n/Qontacts.rrh" TitleResourceBundleClassName="i18n.Qontacts" TitleResourceBundleKey="APP_TITLE" DescriptionId="APP_DESCRIPTION">
+    <Icons>
+      <Icon CanonicalFileName="res/icon-precision-idle.png" IsFocus="false"/>
+      <Icon CanonicalFileName="res/icon-precision-highlight.png" IsFocus="true"/>
+    </Icons>
+  </Resources>
+  <Compile OutputCompilerMessages="false" ConvertImages="false" CreateWarningForNoExportedRoutine="true" CompressResources="false" AliasList="">
+    <PreprocessorDefines/>
+  </Compile>
+  <Packaging OutputFileName="Qontacts" OutputFolder="deliverables" PreBuildStep="" PostBuildStep="" CleanStep="" GenerateALXFile="true">
+    <AlxFiles/>
+  </Packaging>
+  <HiddenProperties>
+    <ClassProtection/>
+    <PackageProtection/>
+  </HiddenProperties>
+  <AlternateEntryPoints>
+    <AlternateEntryPoint Title="Qontacts-Icon-Surrogate" MainMIDletName="" ArgumentsForMain="gui" HomeScreenPosition="0" StartupTier="7" IsSystemModule="true" IsAutostartup="true" hasTitleResource="false" TitleResourceBundleKey="" TitleResourceBundleName="" TitleResourceBundleClassName="" TitleResourceBundleRelativePath="">
+      <Icons/>
+    </AlternateEntryPoint>
+  </AlternateEntryPoints>
+</Properties>
