@@ -158,14 +158,14 @@ public class ContactsModel {
 		if ((number != null) && (number.length() > 0)) {
 			String _retNumber = "";
 			String _tempPrefix = "";
-			String _tempNumber = number;
+			String _tempNumber = number.trim();
 			
 			if (number.startsWith("+974")) {
 				_tempPrefix = "+974";
-				_tempNumber = number.substring(4);
+				_tempNumber = number.substring(4).trim();
 			} else if (number.startsWith("00974")) {
 				_tempPrefix = "00974";
-				_tempNumber = number.substring(5);
+				_tempNumber = number.substring(5).trim();
 			}
 			
             if ((_tempNumber.length() == 7) && (
