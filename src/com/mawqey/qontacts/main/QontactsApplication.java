@@ -27,6 +27,7 @@ import net.rim.device.api.i18n.Locale;
 import net.rim.device.api.i18n.ResourceBundle;
 import net.rim.device.api.system.ApplicationManager;
 import net.rim.device.api.system.Bitmap;
+import net.rim.device.api.system.DeviceInfo;
 import net.rim.device.api.ui.UiApplication;
 
 public class QontactsApplication extends UiApplication {
@@ -71,6 +72,8 @@ public class QontactsApplication extends UiApplication {
 	}
 	
 	public static void main(String[] args) {
+		//System.out.println(DeviceInfo.getSoftwareVersion());
+		/*
 		if ( args != null && args.length > 0 && args[0].equals("gui") ){
 			//alternate entry point 
 			QontactsApplication theApp = new QontactsApplication(true);
@@ -80,5 +83,8 @@ public class QontactsApplication extends UiApplication {
 			QontactsApplication theApp = new QontactsApplication(false);
 			theApp.enterEventDispatcher();
 		}
+		*/
+		QontactsApplication theApp = new QontactsApplication(false);
+		theApp.enterEventDispatcher();
 	}
 }
