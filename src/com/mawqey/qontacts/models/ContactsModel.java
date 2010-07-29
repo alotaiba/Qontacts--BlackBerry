@@ -45,7 +45,7 @@ public class ContactsModel {
 		
 	}
 	
-	public boolean openContactsDB() {
+	public boolean openContactsDB() {		
 		if (this.contactList == null) {
 			try {
 				BlackBerryPIM bbPIM = (BlackBerryPIM) BlackBerryPIM.getInstance();
@@ -154,18 +154,36 @@ public class ContactsModel {
 		return _retNumbers;
 	}
 	
+	private String cleanNumber(String number) {
+		String invalidChars = "- ";
+
+		StringBuffer buffer = new StringBuffer();
+
+	    for ( int i = 0; i < number.length(); i++ ) {
+	    	char c = number.charAt(i);
+			int pos = invalidChars.indexOf(c);
+			if (pos == -1) {
+				buffer.append(c);
+			}
+	    }
+
+	    return buffer.toString();
+	}
+	
 	private String updateableNumber(String number) {
 		if ((number != null) && (number.length() > 0)) {
+			number = cleanNumber(number);
+			
 			String _retNumber = "";
 			String _tempPrefix = "";
-			String _tempNumber = number.trim();
+			String _tempNumber = number;
 			
 			if (number.startsWith("+974")) {
 				_tempPrefix = "+974";
-				_tempNumber = number.substring(4).trim();
+				_tempNumber = number.substring(4);
 			} else if (number.startsWith("00974")) {
 				_tempPrefix = "00974";
-				_tempNumber = number.substring(5).trim();
+				_tempNumber = number.substring(5);
 			}
 			
             if ((_tempNumber.length() == 7) && (
